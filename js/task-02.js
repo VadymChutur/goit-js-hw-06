@@ -9,15 +9,15 @@ const ingredients = [
 
 const ingredientsRef = document.querySelector('#ingredients');
 
-function createItemRef() {
+function createItemEL() {
   const newArray = [];
   ingredients.forEach((element) => {
-    const itemLiRef = document.createElement('li');
-    itemLiRef.classList.add('js--ingredients__item');
-    itemLiRef.textContent = `${element}`;
-    newArray.push(itemLiRef);
+    const itemEl = document.createElement('li');
+    itemEl.classList.add('js--ingredients__item');
+    itemEl.textContent = `${element}`;
+    newArray.push(itemEl);
   });
   return ingredientsRef.append(...newArray);
 }
 
-createItemRef();
+createItemEL();

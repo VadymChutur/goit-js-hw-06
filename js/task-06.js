@@ -16,5 +16,4 @@ function validName(event) {
   }
 }
 
-nameFieldRef.addEventListener('input', validName);
-// nameFieldRef.addEventListener('focus', validName);
+nameFieldRef.addEventListener('blur', validName);
