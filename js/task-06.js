@@ -1,7 +1,10 @@
 const nameFieldRef = document.querySelector('#validation-input');
 
-function addClassValid(add, remove, element) {
+function addClassValid(add, element) {
   element.classList.add(add);
+}
+
+function removeClassValid(remove, element) {
   element.classList.remove(remove);
 }
 
@@ -10,9 +13,11 @@ function validName(event) {
   const validLength = Number(dataset.length);
 
   if (value.length === validLength) {
-    addClassValid('valid', 'invalid', event.target);
+    addClassValid('valid', event.target);
+    removeClassValid('invalid', event.target);
   } else {
-    addClassValid('invalid', 'valid', event.target);
+    addClassValid('invalid', event.target);
+    removeClassValid('valid', event.target);
   }
 }
 
