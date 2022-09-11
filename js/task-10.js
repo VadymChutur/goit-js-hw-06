@@ -15,6 +15,8 @@ function createBoxes() {
     divEl.classList.add('random__box');
     divEl.style.width = `${(width += 10)}px`;
     divEl.style.height = `${(height += 10)}px`;
+    divEl.style.border = '1px solid';
+    divEl.style.margin = '10px';
     divEl.style.backgroundColor = `${getRandomHexColor()}`;
     arrayBoxes.push(divEl);
   }
