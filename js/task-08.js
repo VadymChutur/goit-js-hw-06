@@ -7,7 +7,13 @@ function handleSubmit(event) {
   if (email.value === '' || password.value === '') {
     alert('Fill in all fields');
   } else {
-    console.log(`Email: ${email.value}, Password: ${password.value}`);
+    const autorization = {
+      email: email.value,
+      password: password.value,
+    };
+
+    console.log(autorization);
+    // console.log(`Email: ${email.value}, Password: ${password.value}`);
     event.target.reset();
   }
 }
